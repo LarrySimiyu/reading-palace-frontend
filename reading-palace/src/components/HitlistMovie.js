@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class Navigation extends Component {
+
+class HitlistMovie extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -11,4 +12,4 @@ class Navigation extends Component {
     }
 }
  
-export default Navigation;
+export default HitlistMovie;
