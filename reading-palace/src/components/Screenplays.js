@@ -8,6 +8,13 @@ class Screenplays extends Component {
       screenplays: []
     };
   }
+
+  handleInputChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
   render() {
     return (
       <div>
