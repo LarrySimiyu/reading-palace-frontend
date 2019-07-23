@@ -17,7 +17,17 @@ class Screenplay extends Component {
     });
   };
 
-  submitFriend = event => {};
+  addScreenplay = event => {
+    event.preventDefault();
+
+    const { title, description, category } = this.state;
+
+    let newScreenplay = {
+      title,
+      description,
+      category
+    };
+  };
 
   render() {
     return (
@@ -47,7 +57,7 @@ class Screenplay extends Component {
           id="category"
           placeholder="category"
         />
-        <button />
+        <button onClick={this.addScreenplay} />
       </div>
     );
   }

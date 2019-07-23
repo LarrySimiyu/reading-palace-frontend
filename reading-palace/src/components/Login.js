@@ -35,6 +35,7 @@ class  extends Component {
                         value={this.state.email}
                         onChange={this.handleInputChange}
                         name="email"
+                        
                     />
                     <input
                         type="text"

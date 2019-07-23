@@ -26,18 +26,21 @@ class SignUp extends Component {
             placeholder="Email"
             value={this.state.email}
             name="email"
+            onChange={this.handleInputChange}
           />
           <input
             type="text"
             placeholder="Username"
             value={this.state.username}
             name="username"
+            onChange={this.handleInputChange}
           />
           <input
             type="text"
             placeholder="Password"
             value={this.state.password}
             name="password"
+            onChange={this.handleInputChange}
           />
         </form>
       </div>
