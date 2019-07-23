@@ -33,31 +33,33 @@ class Screenplay extends Component {
     return (
       <div>
         <h1>Submit Screenplay</h1>
-        <input
-          type="text"
-          name="title"
-          value={this.state.title}
-          onChange={this.handleInputChange}
-          id="title"
-          placeholder="title"
-        />
-        <input
-          type="text"
-          name="description"
-          value={this.state.description}
-          onChange={this.handleInputChange}
-          id="description"
-          placeholder="title"
-        />
-        <input
-          type="text"
-          name="category"
-          value={this.state.category}
-          onChange={this.handleInputChange}
-          id="category"
-          placeholder="category"
-        />
-        <button onClick={this.addScreenplay} />
+        <form onSubmit={this.addScreenplay}>
+          <input
+            type="text"
+            name="title"
+            value={this.state.title}
+            onChange={this.handleInputChange}
+            id="title"
+            placeholder="title"
+          />
+          <input
+            type="text"
+            name="description"
+            value={this.state.description}
+            onChange={this.handleInputChange}
+            id="description"
+            placeholder="title"
+          />
+          <input
+            type="text"
+            name="category"
+            value={this.state.category}
+            onChange={this.handleInputChange}
+            id="category"
+            placeholder="category"
+          />
+          <button onClick={this.addScreenplay} />
+        </form>
       </div>
     );
   }
