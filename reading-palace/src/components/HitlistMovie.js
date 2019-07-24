@@ -19,13 +19,16 @@ class HitlistMovie extends Component {
     return (
       <div>
         <h1>Hitlist</h1>
-        <input
-          type="text"
-          name="title"
-          onChange={this.handleInputChange}
-          value={this.state.title}
-          placeholder="Add A Screenplay"
-        />
+        <form>
+          <input
+            type="text"
+            name="title"
+            onChange={this.handleInputChange}
+            value={this.state.title}
+            placeholder="Add A Screenplay"
+          />
+          <button onClick={this.addToHitlist}>Add To Hitlist</button>
+        </form>
       </div>
     );
   }
