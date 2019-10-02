@@ -17,10 +17,11 @@ class Navigation extends Component {
     return (
       <nav>
         <div>
+          <h1>this nav</h1>
           {/* to="/address" */}
-          <NavLink to="#">Screenplays</NavLink>
-          <NavLink to="#">Hitlist</NavLink>
-          <NavLink to="#">Search</NavLink>
+          <NavLink to="/screenplays">Screenplays</NavLink>
+          <NavLink to="/hitlist">Hitlist</NavLink>
+          <NavLink to="/search">Search</NavLink>
           {localStorage.token ? (
             <button>Log Out</button>
           ) : (
@@ -32,4 +33,4 @@ class Navigation extends Component {
   }
 }
 
-export default withRouter(Navigation);
+export default Navigation;
