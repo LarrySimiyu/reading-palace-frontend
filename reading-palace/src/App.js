@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import Hitlist from "./components/Hitlist";
+import Screenplays from "./components/Screenplays";
 import Navigation from "./components/Navigation";
+import SearchScreenplays from "./components/searchScreenplay";
+import Screenplay from "./components/Screenplay";
 
 function App() {
   // const [state, setState] = useState([{id: 1, name: 'Hello'}])
   return (
     <div className="App">
-      <h1>Testing</h1>
-      <Hitlist />
       <Navigation />
+      <SearchScreenplays />
+      <Screenplays />
+      <Screenplay />
     </div>
   );
 }
