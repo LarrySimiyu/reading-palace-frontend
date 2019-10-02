@@ -17,8 +17,6 @@ class Navigation extends Component {
     return (
       <nav>
         <div>
-          <h1>this nav</h1>
-          {/* to="/address" */}
           <NavLink to="/screenplays">Screenplays</NavLink>
           <NavLink to="/hitlist">Hitlist</NavLink>
           <NavLink to="/search">Search</NavLink>

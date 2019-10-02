@@ -48,7 +48,7 @@ class Screenplay extends Component {
             value={this.state.description}
             onChange={this.handleInputChange}
             id="description"
-            placeholder="title"
+            placeholder="description"
           />
           <input
             type="text"
@@ -58,7 +58,7 @@ class Screenplay extends Component {
             id="category"
             placeholder="category"
           />
-          <button onClick={this.addScreenplay} />
+          <button onClick={this.addScreenplay}>Submit</button>
         </form>
       </div>
     );
