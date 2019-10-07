@@ -6,6 +6,7 @@ class Screenplay extends Component {
     super(props);
     this.state = {
       title: "",
+      screenWriter: "",
       description: "",
       category: ""
     };
@@ -20,7 +21,7 @@ class Screenplay extends Component {
   addScreenplay = event => {
     event.preventDefault();
 
-    const { title, description, category } = this.state;
+    const { title, screenWriter, description, category } = this.state;
 
     let newScreenplay = {
       title,
