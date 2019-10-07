@@ -33,7 +33,7 @@ class Screenplays extends Component {
   render() {
     return (
       <div>
-        {this.state.users.length === 0 ? (
+        {this.state.users.length === 0 ? ( // if length of screenplay is 0 then return loading
           <div>Loading...</div>
         ) : (
           this.state.users.map((e, i) => {
