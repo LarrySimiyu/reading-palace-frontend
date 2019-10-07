@@ -20,11 +20,11 @@ class Navigation extends Component {
           <NavLink to="/screenplays">Screenplays</NavLink>
           <NavLink to="/hitlist">Hitlist</NavLink>
           <NavLink to="/search">Search</NavLink>
-          {localStorage.token ? (
+          {/* {localStorage.token ? (
             <button>Log Out</button>
           ) : (
             <NavLink to="#">Login</NavLink>
-          )}
+          )} */}
         </div>
       </nav>
     );
