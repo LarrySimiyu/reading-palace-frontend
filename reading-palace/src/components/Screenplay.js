@@ -6,7 +6,7 @@ class Screenplay extends Component {
     super(props);
     this.state = {
       title: "",
-      screenWriter: "",
+      screenwriter: "",
       description: "",
       category: ""
     };
@@ -21,10 +21,11 @@ class Screenplay extends Component {
   addScreenplay = event => {
     event.preventDefault();
 
-    const { title, screenWriter, description, category } = this.state;
+    const { title, screenwriter, description, category } = this.state;
 
     let newScreenplay = {
       title,
+      screenwriter,
       description,
       category
     };
@@ -41,7 +42,16 @@ class Screenplay extends Component {
             value={this.state.title}
             onChange={this.handleInputChange}
             id="title"
-            placeholder="title"
+            placeholder="Title"
+          />
+
+          <input
+            type="text"
+            name="screenwriter"
+            value={this.state.screenwriter}
+            onChange={this.handleInputChange}
+            id="screenwriter"
+            placeholder="Screenwriter"
           />
           <input
             type="text"
@@ -49,7 +59,7 @@ class Screenplay extends Component {
             value={this.state.description}
             onChange={this.handleInputChange}
             id="description"
-            placeholder="description"
+            placeholder="Description"
           />
           <input
             type="text"
