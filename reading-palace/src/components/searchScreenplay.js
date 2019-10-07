@@ -12,6 +12,17 @@ class searchScreenplay extends Component {
     };
   }
 
+  componentDidMount() {
+    axios
+      .get("#api link goes here")
+      .then(response => {
+        this.setState({
+          students: response.data
+        });
+      })
+      .catch(error => console.log(error));
+  }
+
   filter = () => {
     const filtered = this.state.screenplays.filter(screenplay => {
       return screenplay.title == this.state.searchInput;
