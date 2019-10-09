@@ -6,10 +6,21 @@ class searchScreenplay extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchInput: "",
       screenplays: [],
+      searchInput: "",
       filteredScreenplays: []
     };
+  }
+
+  componentDidMount() {
+    axios
+      .get("#api link goes here")
+      .then(response => {
+        this.setState({
+          students: response.data
+        });
+      })
+      .catch(error => console.log(error));
   }
 
   filter = () => {
@@ -37,12 +48,12 @@ class searchScreenplay extends Component {
         <form>
           <input
             type="text"
-            placeholder="Search For Screenplay"
+            placeholder="Screenplay Name"
             onChange={this.handleInputChange}
             value={this.state.searchInput}
             name="searchInput"
           />
-          <button>Search</button>
+          <button onClick={this.filter}>Search</button>
         </form>
       </div>
     );

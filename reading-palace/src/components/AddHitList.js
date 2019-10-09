@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-class Screenplay extends Component {
+class AddHitlist extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,20 +22,48 @@ class Screenplay extends Component {
   addScreenplay = event => {
     event.preventDefault();
 
-    const { title, screenwriter, description, category } = this.state;
+    const {
+      title,
+      screenwriter,
+      co_writer,
+      description,
+      category
+    } = this.state;
 
-    // let newScreenplay = {
-    //   title,
-    //   screenwriter,
-    //   description,
-    //   category
-    // };
+    let newScreenplay = {
+      title,
+      screenwriter,
+      co_writer,
+      description,
+      category
+    };
+
+    axios
+      .post("https://script-palace.herokuapp.com/api/hitList", newScreenplay)
+      .then(response => {
+        if (response.status === 200) {
+          alert("screenplay was added");
+          this.setState({
+            title: "",
+            screenwriter: "",
+            co_writer: "",
+            description: "",
+            category: ""
+          });
+          this.props.history.push("/filmInfo");
+        } else {
+          throw new Error(); // something wernt wrong
+        }
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+    this.props.history.push("/filmInfo");
   };
 
   render() {
     return (
       <div>
-        <h1>Submit Screenplay</h1>
         <form onSubmit={this.addScreenplay}>
           <input
             type="text"
@@ -85,4 +113,4 @@ class Screenplay extends Component {
   }
 }
 
-export default Screenplay;
+export default AddHitlist;

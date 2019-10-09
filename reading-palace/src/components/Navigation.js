@@ -8,6 +8,7 @@ class Navigation extends Component {
     this.state = {};
   }
 
+  // log out functionality
   logOut = () => {
     window.localStorage.clear();
     this.props.history.push("/");
