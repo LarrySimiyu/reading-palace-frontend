@@ -32,7 +32,11 @@ class Hitlist extends Component {
           <div>Add to the infamous hitlist..</div>
         ) : (
           this.state.screenplays.map(screenplay => {
-            return <div key={screenplay.id}></div>;
+            return (
+              <div key={screenplay.id}>
+                <div>{screenplay.title}</div>
+              </div>
+            );
           })
         )}
       </div>

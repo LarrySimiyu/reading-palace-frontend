@@ -37,8 +37,16 @@ class Screenplays extends Component {
         {this.state.screenplays.length === 0 ? ( // if length of screenplay is 0 then return loading
           <div>Add some screenplays to read...</div>
         ) : (
-          this.state.users.map((e, i) => {
-            return <div key={i}>{e.last_name}</div>;
+          this.state.screenplays.map(screenplay => {
+            return (
+              <div key={screenplay.id}>
+                <div>{screenplay.title}</div>
+                <div>{screenplay.screenwriter}</div>
+                <div>{screenplay.co_writer}</div>
+                <div>{screenplay.description}</div>
+                <div>{screenplay.category}</div>
+              </div>
+            );
           })
         )}
       </div>
