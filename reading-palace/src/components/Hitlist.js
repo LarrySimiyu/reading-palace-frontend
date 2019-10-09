@@ -9,10 +9,32 @@ class Hitlist extends Component {
       screenplays: []
     };
   }
+
+  componentDidMount() {
+    this.getScreenplays();
+  }
+
+  getScreenplays = () => {
+    axios
+      .get("https://script-palace.herokuapp.com/api/hitList")
+      .then(response => {
+        this.setState({
+          screenplays: response.data
+        });
+      })
+      .catch(error => console.log(error));
+  };
+
   render() {
     return (
       <div>
-        <h1>Hitlist</h1>
+        {this.state.screenplays.length === 0 ? (
+          <div>Add to the infamous hitlist..</div>
+        ) : (
+          this.state.screenplays.map(screenplay => {
+            return <div key={screenplay.id}></div>;
+          })
+        )}
       </div>
     );
   }
