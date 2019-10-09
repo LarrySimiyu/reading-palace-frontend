@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import AddHitlist from "./AddHitList";
+
 class Hitlist extends Component {
   constructor(props) {
     super(props);
@@ -28,6 +30,7 @@ class Hitlist extends Component {
   render() {
     return (
       <div>
+        <AddHitlist />
         {this.state.screenplays.length === 0 ? (
           <div>Add to the infamous hitlist..</div>
         ) : (

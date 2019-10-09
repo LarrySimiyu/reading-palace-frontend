@@ -7,6 +7,7 @@ class Screenplay extends Component {
     this.state = {
       title: "",
       screenwriter: "",
+      co_writer: "",
       description: "",
       category: ""
     };
