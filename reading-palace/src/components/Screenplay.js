@@ -56,6 +56,14 @@ class Screenplay extends Component {
           />
           <input
             type="text"
+            name="co_writer"
+            value={this.state.co_writer}
+            onChange={this.handleInputChange}
+            id="co_writer"
+            placeholder="Co Writer"
+          />
+          <input
+            type="text"
             name="description"
             value={this.state.description}
             onChange={this.handleInputChange}

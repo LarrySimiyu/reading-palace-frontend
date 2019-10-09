@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class AddHitlist extends Component {
   constructor(props) {
@@ -83,7 +84,7 @@ class AddHitlist extends Component {
           />
           <input
             type="text"
-            name="screenwriter"
+            name="co_writer"
             value={this.state.co_writer}
             onChange={this.handleInputChange}
             id="co_writer"
