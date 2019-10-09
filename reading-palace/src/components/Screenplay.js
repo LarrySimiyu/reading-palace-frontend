@@ -23,12 +23,12 @@ class Screenplay extends Component {
 
     const { title, screenwriter, description, category } = this.state;
 
-    let newScreenplay = {
-      title,
-      screenwriter,
-      description,
-      category
-    };
+    // let newScreenplay = {
+    //   title,
+    //   screenwriter,
+    //   description,
+    //   category
+    // };
   };
 
   render() {

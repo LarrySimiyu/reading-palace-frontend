@@ -5,8 +5,7 @@ class Screenplays extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //screenplays: ["larry", "movie two", "movie three", "movie four"]
-      users: []
+      screenplays: []
     };
   }
 
@@ -16,12 +15,13 @@ class Screenplays extends Component {
 
   getScreenplays = () => {
     axios
-      .get("https://reqres.in/api/users?page=1")
-      .then(data => this.setState({ users: data.data.data }))
-      .catch(error => {
-        console.log(error);
-        return null;
-      });
+      .get("https://script-palace.herokuapp.com/api/filmInfo")
+      .then(response => {
+        this.setState({
+          screeenplays: response.data
+        });
+      })
+      .catch(error => console.log(error));
   };
 
   handleInputChange = event => {
@@ -33,8 +33,8 @@ class Screenplays extends Component {
   render() {
     return (
       <div>
-        {this.state.users.length === 0 ? ( // if length of screenplay is 0 then return loading
-          <div>Loading...</div>
+        {this.state.screenplays.length === 0 ? ( // if length of screenplay is 0 then return loading
+          <div>Add some screenplays to read...</div>
         ) : (
           this.state.users.map((e, i) => {
             return <div key={i}>{e.last_name}</div>;
