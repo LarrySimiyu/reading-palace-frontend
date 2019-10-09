@@ -5,8 +5,7 @@ class Screenplays extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      screenplays: [],
-      testing: []
+      screenplays: []
     };
   }
 
