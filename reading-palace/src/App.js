@@ -5,7 +5,6 @@ import Screenplays from "./components/Screenplays";
 import Navigation from "./components/Navigation";
 import SearchScreenplays from "./components/searchScreenplay";
 import Screenplay from "./components/Screenplay";
-import HitList from "./components/Hitlist";
 import Hitlist from "./components/Hitlist";
 
 function App() {
