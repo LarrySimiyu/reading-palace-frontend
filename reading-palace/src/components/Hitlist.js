@@ -18,7 +18,7 @@ class Hitlist extends Component {
 
   getScreenplays = () => {
     axios
-      .get("https://script-palace.herokuapp.com/api/hitList")
+      .get("https://movie-palace.herokuapp.com/api/hitlist")
       .then(response => {
         this.setState({
           screenplays: response.data
