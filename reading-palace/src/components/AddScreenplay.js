@@ -18,8 +18,3 @@ class AddScreenplay extends Component {
 }
  
 export default AddScreenplay;
-title:"",
-screenwriter:"",
-co_author:"",
-description:"",
-category:""
