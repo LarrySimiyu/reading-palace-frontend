@@ -15,7 +15,7 @@ class Screenplays extends Component {
 
   getScreenplays = () => {
     axios
-      .get("https://script-palace.herokuapp.com/api/filmInfo")
+      .get("https://movie-palace.herokuapp.com/filmInfo")
       .then(response => {
         this.setState({
           screeenplays: response.data
