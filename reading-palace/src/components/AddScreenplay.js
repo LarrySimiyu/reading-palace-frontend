@@ -12,6 +12,7 @@ class AddScreenplay extends Component {
       category: ""
     };
   }
+
   render() {
     return (
       <div>
