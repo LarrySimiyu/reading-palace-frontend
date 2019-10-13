@@ -19,7 +19,7 @@ class Screenplay extends Component {
           screenplay: response.data[0]
         });
       })
-      .catch(error => console.log(eror));
+      .catch(error => console.log(error));
   }
 
   render() {
