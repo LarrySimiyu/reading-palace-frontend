@@ -23,7 +23,23 @@ class Screenplay extends Component {
   }
 
   render() {
-    return <div>Screenplay</div>;
+    return (
+      <div>
+        <div>
+          <h1>Screenplay Info</h1>
+        </div>
+        <div>{this.state.screenplay.title}</div>
+        <div>
+          {this.state.screenplay.co_author.length > 0 ? (
+            <div>{this.state.screenplay.co_author}</div>
+          ) : (
+            <div>No Co Author</div>
+          )}
+        </div>
+        <div>{this.state.screenplay.description}</div>
+        <div>{this.state.screenplay.category}</div>
+      </div>
+    );
   }
 }
 
