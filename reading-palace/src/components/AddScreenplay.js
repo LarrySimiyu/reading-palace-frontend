@@ -30,6 +30,28 @@ class AddScreenplay extends Component {
       description,
       category
     };
+
+    axios
+      .post("https://script-palace.herokuapp.com/api/hitList", newScreenplay)
+      .then(response => {
+        if (response.status === 200) {
+          alert("screenplay was added");
+          this.setState({
+            title: "",
+            screenwriter: "",
+            co_writer: "",
+            description: "",
+            category: ""
+          });
+          this.props.history.push("/filmInfo");
+        } else {
+          throw new Error();
+        }
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+    this.props.history.push("/filmInfo");
   };
 
   render() {
