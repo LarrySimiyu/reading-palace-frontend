@@ -5,35 +5,25 @@ class Screenplay extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "",
-      screenwriter: "",
-      co_writer: "",
-      description: "",
-      category: ""
+      screenplay: {}
     };
   }
 
-  handleInputChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
+  componentDidMount() {
+    const id = this.props.location.pathname.split("/")[2];
 
-  addScreenplay = event => {
-    event.preventDefault();
-
-    const { title, screenwriter, description, category } = this.state;
-
-    let newScreenplay = {
-      title,
-      screenwriter,
-      description,
-      category
-    };
-  };
+    axios
+      .get(`https://movie-palace.herokuapp.com/api/filmInfo/${id}`)
+      .then(response => {
+        this.setState({
+          screenplay: response.data[0]
+        });
+      })
+      .catch(error => console.log(eror));
+  }
 
   render() {
-    return <div></div>;
+    return <div>Screenplay</div>;
   }
 }
 
