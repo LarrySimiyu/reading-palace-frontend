@@ -19,6 +19,19 @@ class AddScreenplay extends Component {
     });
   };
 
+  addScreenplay = event => {
+    event.preventDefault();
+
+    const { title, screenwriter, description, category } = this.state;
+
+    let newScreenplay = {
+      title,
+      screenwriter,
+      description,
+      category
+    };
+  };
+
   render() {
     return (
       <div>

@@ -38,7 +38,7 @@ class Screenplays extends Component {
         ) : (
           this.state.screenplays.map(screenplay => {
             return (
-              <div key={screenplay.id}>
+              <div className="screenplay" key={screenplay.id}>
                 <div>{screenplay.title}</div>
                 <div>{screenplay.screenwriter}</div>
                 <div>{screenplay.co_writer}</div>
