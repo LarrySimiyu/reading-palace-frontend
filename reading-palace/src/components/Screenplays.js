@@ -35,7 +35,6 @@ class Screenplays extends Component {
   render() {
     return (
       <div>
-        <AddScreenplay />
         {this.state.screenplays.length === 0 ? ( // if length of screenplay is 0 then return loading
           <div>Add some screenplays to read...</div>
         ) : (
