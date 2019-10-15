@@ -11,6 +11,7 @@ import Screenplays from "./components/Screenplays";
 
 import Hitlist from "./components/Hitlist";
 import AddHitlist from "./components/AddHitList";
+import searchScreenplay from "./components/searchScreenplay";
 
 class App extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class App extends Component {
         <Route exact path="/" component={Screenplays} />
         <Route exact path="/screemplay" component={Screenplay} />
         <Route exact path="/add" component={AddScreenplay} />
+        <Route exact path="/search" component={searchScreenplay} />
       </div>
     );
   }
