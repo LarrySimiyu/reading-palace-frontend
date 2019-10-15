@@ -18,8 +18,8 @@ class Navigation extends Component {
     return (
       <nav>
         <div>
-          <NavLink to="/screenplays">Screenplays</NavLink>
-          <NavLink to="/hitlist">Hitlist</NavLink>
+          <NavLink to="/">Screenplays</NavLink>
+          <NavLink to="/add">Submit</NavLink>
           <NavLink to="/search">Search</NavLink>
           {/* {localStorage.token ? (
             <button>Log Out</button>
