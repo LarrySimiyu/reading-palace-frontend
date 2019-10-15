@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Route, NavLink, Redirect } from "react-router-dom";
 import "./App.css";
 
 import Navigation from "./components/Navigation";
@@ -11,17 +12,21 @@ import Screenplays from "./components/Screenplays";
 import Hitlist from "./components/Hitlist";
 import AddHitlist from "./components/AddHitList";
 
-function App() {
-  // const [state, setState] = useState([{id: 1, name: 'Hello'}])
-  return (
-    <div className="App">
-      <Navigation />
-      <SearchScreenplays />
-      <Screenplays />
-      <Screenplay />
-      <Hitlist />
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div className="App">
+        <Navigation />
+
+        <Route exact path="/" component={Screenplays} />
+        <Route exact path="/screemplay" component={Screenplay} />
+        <Route exact path="/add" component={AddScreenplay} />
+      </div>
+    );
+  }
 }
 
 export default App;
