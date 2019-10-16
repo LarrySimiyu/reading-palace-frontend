@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-import AddScreenplay from "./AddScreenplay";
+// import AddScreenplay from "./AddScreenplay";
 
 class Screenplays extends Component {
   constructor(props) {

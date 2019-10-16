@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { NavLink, withRouter } from "react-router-dom";
-import axios from "axios";
 
 class Navigation extends Component {
   constructor(props) {
@@ -33,4 +32,4 @@ class Navigation extends Component {
   }
 }
 
-export default Navigation;
+export default withRouter(Navigation);
