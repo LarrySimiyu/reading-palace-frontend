@@ -14,7 +14,7 @@ class searchScreenplay extends Component {
 
   componentDidMount() {
     axios
-      .get("#api link goes here")
+      .get("https://movie-palace.herokuapp.com/api/filmInfo")
       .then(response => {
         this.setState({
           students: response.data
@@ -25,7 +25,7 @@ class searchScreenplay extends Component {
 
   filter = () => {
     const filtered = this.state.screenplays.filter(screenplay => {
-      return screenplay.title == this.state.searchInput;
+      return screenplay.title === this.state.searchInput;
     });
     this.setState({
       filteredScreenplays: filtered
