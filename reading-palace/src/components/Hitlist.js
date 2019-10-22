@@ -13,10 +13,6 @@ class Hitlist extends Component {
   }
 
   componentDidMount() {
-    this.getScreenplays();
-  }
-
-  getScreenplays = () => {
     axios
       .get("https://movie-palace.herokuapp.com/api/hitlist")
       .then(response => {
@@ -25,7 +21,7 @@ class Hitlist extends Component {
         });
       })
       .catch(error => console.log(error));
-  };
+  }
 
   render() {
     return (
