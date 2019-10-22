@@ -32,7 +32,7 @@ class AddScreenplay extends Component {
     };
 
     axios
-      .post("https://script-palace.herokuapp.com/api/hitList", newScreenplay)
+      .post("https://script-palace.herokuapp.com/api/filmInfo", newScreenplay)
       .then(response => {
         if (response.status === 200) {
           alert("screenplay was added");
