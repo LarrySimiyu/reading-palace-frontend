@@ -12,10 +12,6 @@ class Screenplays extends Component {
   }
 
   componentDidMount() {
-    this.getScreenplays();
-  }
-
-  getScreenplays = () => {
     axios
       .get("https://movie-palace.herokuapp.com/api/filmInfo")
       .then(response => {
@@ -24,7 +20,7 @@ class Screenplays extends Component {
         });
       })
       .catch(error => console.log(error));
-  };
+  }
 
   handleInputChange = event => {
     this.setState({
