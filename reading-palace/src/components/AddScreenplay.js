@@ -23,12 +23,6 @@ class AddScreenplay extends Component {
     event.preventDefault();
 
     const { title, screenwriter, cowriter, description, category } = this.state;
-  };
-
-  addScreenplay = event => {
-    event.preventDefault();
-
-    const { title, screenwriter, cowriter, description, category } = this.state;
 
     let newScreenplay = {
       title,
@@ -44,6 +38,7 @@ class AddScreenplay extends Component {
         if (response.status === 200) {
           alert("screenplay was added");
           this.setState({
+            // clears out the form so they can submit again
             title: "",
             screenwriter: "",
             cowriter: "",
