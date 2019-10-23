@@ -45,7 +45,7 @@ class AddScreenplay extends Component {
             description: "",
             category: ""
           });
-          this.props.history.push("/filmInfo");
+          this.props.history.push("/");
         } else {
           throw new Error();
         }
@@ -53,7 +53,7 @@ class AddScreenplay extends Component {
       .catch(error => {
         console.log(error.message);
       });
-    this.props.history.push("/filmInfo");
+    this.props.history.push("/");
   };
 
   render() {
