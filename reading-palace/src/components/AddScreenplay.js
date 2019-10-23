@@ -19,6 +19,8 @@ class AddScreenplay extends Component {
     });
   };
 
+  handleSubmit = event => {};
+
   addScreenplay = event => {
     event.preventDefault();
 
@@ -57,7 +59,7 @@ class AddScreenplay extends Component {
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input
             type="text"
             name="title"
@@ -99,7 +101,7 @@ class AddScreenplay extends Component {
             id="category"
             placeholder="category"
           />
-          <button onClick={this.addScreenplay}>Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     );
