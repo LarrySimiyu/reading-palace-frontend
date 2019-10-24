@@ -58,7 +58,7 @@ class searchScreenplay extends Component {
         {this.state.filteredScreenplays.map(screenplay => {
           return (
             <div key={screenplay.id} className="screenplay">
-              <Link to={`/filmInfo/${screenplay.id}`} className="linkColor">
+              <Link to={`/screenplay/${screenplay.id}`} className="linkColor">
                 <div>Title: {screenplay.title}</div>
                 <div>screenwriter: {screenplay.screenwriter}</div>
                 <div>Co Author: {screenplay.coauthor}</div>
