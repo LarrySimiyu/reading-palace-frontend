@@ -7,7 +7,7 @@ class AddScreenplay extends Component {
     this.state = {
       title: "",
       screenwriter: "",
-      co_author: "",
+      cowriter: "",
       description: "",
       category: ""
     };
@@ -79,10 +79,10 @@ class AddScreenplay extends Component {
           />
           <input
             type="text"
-            name="co_writer"
+            name="cowriter"
             value={this.state.cowriter}
             onChange={this.handleInputChange}
-            id="co_writer"
+            id="cowriter"
             placeholder="Co Writer"
           />
           <input

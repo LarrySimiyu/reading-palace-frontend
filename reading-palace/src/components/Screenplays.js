@@ -38,7 +38,7 @@ class Screenplays extends Component {
               <div className="screenplay" key={screenplay.id}>
                 <div>Title: {screenplay.title}</div>
                 <div>Screenwriter: {screenplay.screenwriter}</div>
-                <div>Cowriter: {screenplay.co_writer}</div>
+                <div>Cowriter: {screenplay.cowriter}</div>
                 <div>Description: {screenplay.description}</div>
                 <div>Category: {screenplay.category}</div>
               </div>
