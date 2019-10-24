@@ -55,6 +55,16 @@ class searchScreenplay extends Component {
           />
           <button onClick={this.filter}>Search</button>
         </form>
+        {this.state.filteredScreenplays.map(screenplay => {
+          return (
+            <div key={screenplay.id} className="screenplay">
+              <Link
+                to={`/screenplays/${screenplay.id}`}
+                className="linkColor"
+              ></Link>
+            </div>
+          );
+        })}
       </div>
     );
   }
