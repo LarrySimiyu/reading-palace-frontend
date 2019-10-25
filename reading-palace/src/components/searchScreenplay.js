@@ -17,7 +17,7 @@ class searchScreenplay extends Component {
       .get("https://movie-palace.herokuapp.com/api/filmInfo")
       .then(response => {
         this.setState({
-          students: response.data
+          screenplays: response.data
         });
       })
       .catch(error => console.log(error));
@@ -25,7 +25,9 @@ class searchScreenplay extends Component {
 
   filter = () => {
     const filtered = this.state.screenplays.filter(screenplay => {
-      return screenplay.title === this.state.searchInput;
+      return screenplay.title
+        .toLowerCase()
+        .includes(this.state.searchInput.toLowerCase());
     });
     this.setState({
       filteredScreenplays: filtered
@@ -42,6 +44,10 @@ class searchScreenplay extends Component {
   };
 
   render() {
+    const results =
+      this.state.searchInput.length === 0
+        ? this.state.screenplays
+        : this.state.filteredScreenplays;
     return (
       <div>
         <h1>Search By Title</h1>
@@ -53,9 +59,8 @@ class searchScreenplay extends Component {
             value={this.state.searchInput}
             name="searchInput"
           />
-          <button onClick={this.filter}>Search</button>
         </form>
-        {this.state.filteredScreenplays.map(screenplay => {
+        {results.map(screenplay => {
           return (
             <div key={screenplay.id} className="screenplay">
               <Link to={`/screenplay/${screenplay.id}`} className="linkColor">
