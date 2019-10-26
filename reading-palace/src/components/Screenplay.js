@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 class Screenplay extends Component {
   constructor(props) {
@@ -37,10 +38,15 @@ class Screenplay extends Component {
           <h1>Screenplay Info</h1>
         </div>
         <div>Title: {this.state.screenplay.title}</div>
+        <div>Screenwriter: {this.state.screenplay.screenwriter}</div>
         <div>Co-Author: {this.state.screenplay.coauthor}</div>
         <div>Description: {this.state.screenplay.description}</div>
         <div>Category: {this.state.screenplay.category}</div>
-        <button>Read</button>
+        <div> {this.state.screenplay.pdfurl}</div>
+
+        <button type="button" onClick={this.state.screenplay.pdfurl}>
+          Read
+        </button>
       </div>
     );
   }

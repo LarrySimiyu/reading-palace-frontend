@@ -23,21 +23,28 @@ class AddScreenplay extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    const { title, screenwriter, cowriter, description, category } = this.state;
+    const {
+      title,
+      screenwriter,
+      cowriter,
+      description,
+      category,
+      pdfurl
+    } = this.state;
 
     let newScreenplay = {
       title,
       screenwriter,
       cowriter,
       description,
-      category
+      category,
+      pdfurl
     };
 
     axios
       .post("https://movie-palace.herokuapp.com/api/filmInfo", newScreenplay)
       .then(response => {
         if (response.status === 200) {
-          alert("screenplay was added");
           this.setState({
             // clears out the form so they can submit again
             title: "",
@@ -61,6 +68,14 @@ class AddScreenplay extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            name="pdfurl"
+            value={this.state.pdfurl}
+            onChange={this.handleInputChange}
+            id="pdfurl"
+            placeholder="Paste PDF Link"
+          />
           <input
             type="text"
             name="title"
@@ -102,14 +117,7 @@ class AddScreenplay extends Component {
             id="category"
             placeholder="category"
           />
-          <input
-            type="text"
-            name="pdfurl"
-            value={this.state.pdfurl}
-            onChange={this.handleInputChange}
-            id="pdfurl"
-            placeholder="Paste PDF Link"
-          />
+
           <button type="submit">Submit</button>
         </form>
       </div>

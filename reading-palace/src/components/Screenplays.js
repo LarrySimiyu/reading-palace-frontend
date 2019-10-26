@@ -27,8 +27,9 @@ class Screenplays extends Component {
       [event.target.name]: event.target.value
     });
   };
-
   render() {
+    console.log(this.state.screenplays);
+
     return (
       <div>
         {this.state.screenplays.length === 0 ? ( // if length of screenplay is 0 then return loading
@@ -42,6 +43,7 @@ class Screenplays extends Component {
                 <div>Cowriter: {screenplay.cowriter}</div>
                 <div>Description: {screenplay.description}</div>
                 <div>Category: {screenplay.category}</div>
+                <div>{screenplay.pdf}</div>
                 <div>
                   <Link to={`/screenplay/${screenplay.id}`}>
                     <button>View</button>
