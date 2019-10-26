@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 // import AddScreenplay from "./AddScreenplay";
 
@@ -41,6 +42,11 @@ class Screenplays extends Component {
                 <div>Cowriter: {screenplay.cowriter}</div>
                 <div>Description: {screenplay.description}</div>
                 <div>Category: {screenplay.category}</div>
+                <div>
+                  <Link to={`/screenplay/${screenplay.id}`}>
+                    <button>View</button>
+                  </Link>
+                </div>
               </div>
             );
           })
