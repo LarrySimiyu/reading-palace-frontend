@@ -102,6 +102,14 @@ class AddScreenplay extends Component {
             id="category"
             placeholder="category"
           />
+          <input
+            type="text"
+            name="pdfurl"
+            value={this.state.pdfurl}
+            onChange={this.handleInputChange}
+            id="pdfurl"
+            placeholder="Paste PDF Link"
+          />
           <button type="submit">Submit</button>
         </form>
       </div>
