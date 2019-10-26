@@ -40,6 +40,7 @@ class Screenplay extends Component {
         <div>Co-Author: {this.state.screenplay.coauthor}</div>
         <div>Description: {this.state.screenplay.description}</div>
         <div>Category: {this.state.screenplay.category}</div>
+        <button>Read</button>
       </div>
     );
   }
