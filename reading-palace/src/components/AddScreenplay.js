@@ -9,7 +9,8 @@ class AddScreenplay extends Component {
       screenwriter: "",
       cowriter: "",
       description: "",
-      category: ""
+      category: "",
+      pdfurl: ""
     };
   }
 
@@ -43,7 +44,8 @@ class AddScreenplay extends Component {
             screenwriter: "",
             cowriter: "",
             description: "",
-            category: ""
+            category: "",
+            pdfurl: ""
           });
           this.props.history.push("/");
         } else {
