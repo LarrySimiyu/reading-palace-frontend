@@ -10,7 +10,8 @@ class AddScreenplay extends Component {
       cowriter: "",
       description: "",
       category: "",
-      pdfurl: ""
+      pdfurl: "",
+      cool: ""
     };
   }
 
@@ -29,7 +30,8 @@ class AddScreenplay extends Component {
       cowriter,
       description,
       category,
-      pdfurl
+      pdfurl,
+      cool
     } = this.state;
 
     let newScreenplay = {
@@ -38,7 +40,8 @@ class AddScreenplay extends Component {
       cowriter,
       description,
       category,
-      pdfurl
+      pdfurl,
+      cool
     };
 
     axios
@@ -52,7 +55,8 @@ class AddScreenplay extends Component {
             cowriter: "",
             description: "",
             category: "",
-            pdfurl: ""
+            pdfurl: "",
+            cool: ""
           });
           this.props.history.push("/");
         } else {
@@ -83,6 +87,15 @@ class AddScreenplay extends Component {
             onChange={this.handleInputChange}
             id="title"
             placeholder="Title"
+          />
+
+          <input
+            type="text"
+            name="cool"
+            value={this.state.cool}
+            onChange={this.handleInputChange}
+            id="cool"
+            placeholder="COOL TEST"
           />
 
           <input
