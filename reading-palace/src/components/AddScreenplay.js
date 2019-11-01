@@ -10,8 +10,7 @@ class AddScreenplay extends Component {
       cowriter: "",
       description: "",
       category: "",
-      pdfurl: "",
-      cool: ""
+      pdfurl: ""
     };
   }
 
@@ -84,15 +83,6 @@ class AddScreenplay extends Component {
             onChange={this.handleInputChange}
             id="title"
             placeholder="Title"
-          />
-
-          <input
-            type="text"
-            name="cool"
-            value={this.state.cool}
-            onChange={this.handleInputChange}
-            id="cool"
-            placeholder="COOL TEST"
           />
 
           <input
