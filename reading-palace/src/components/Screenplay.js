@@ -42,9 +42,15 @@ class Screenplay extends Component {
         <div>Co-Author: {this.state.screenplay.coauthor}</div>
         <div>Description: {this.state.screenplay.description}</div>
         <div>Category: {this.state.screenplay.category}</div>
-        <div> {this.state.screenplay.pdfurl}</div>
+        <div>
+          <button>
+            <a href={this.state.screenplay.pdfurl} target="_blank">
+              Read
+            </a>
+          </button>
+        </div>
 
-        <button type="button" onClick={this.state.screenplay.pdfurl}>
+        <button type="button" href={this.state.screenplay.pdfurl}>
           Read
         </button>
       </div>
