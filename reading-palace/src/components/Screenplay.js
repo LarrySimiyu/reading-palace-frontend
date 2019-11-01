@@ -30,7 +30,7 @@ class Screenplay extends Component {
 
   render() {
     if (this.state.screenplay === null) {
-      return <h1>Loading...</h1>;
+      return <h1>Loading Screenplay Info...</h1>;
     }
     return (
       <div>
