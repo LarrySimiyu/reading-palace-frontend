@@ -43,7 +43,7 @@ class Screenplays extends Component {
                 <div>Cowriter: {screenplay.cowriter}</div>
                 <div>Description: {screenplay.description}</div>
                 <div>Category: {screenplay.category}</div>
-                <div>{screenplay.pdf}</div>
+                <div>{screenplay.pdfurl}</div>
                 <div>
                   <Link to={`/screenplay/${screenplay.id}`}>
                     <button>View</button>
