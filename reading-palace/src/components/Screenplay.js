@@ -51,7 +51,7 @@ class Screenplay extends Component {
         </div>
 
         <button type="button" href={this.state.screenplay.pdfurl}>
-          Read
+          Return
         </button>
       </div>
     );
