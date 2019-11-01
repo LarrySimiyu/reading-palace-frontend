@@ -30,8 +30,7 @@ class AddScreenplay extends Component {
       cowriter,
       description,
       category,
-      pdfurl,
-      cool
+      pdfurl
     } = this.state;
 
     let newScreenplay = {
@@ -40,8 +39,7 @@ class AddScreenplay extends Component {
       cowriter,
       description,
       category,
-      pdfurl,
-      cool
+      pdfurl
     };
 
     axios
@@ -55,8 +53,7 @@ class AddScreenplay extends Component {
             cowriter: "",
             description: "",
             category: "",
-            pdfurl: "",
-            cool: ""
+            pdfurl: ""
           });
           this.props.history.push("/");
         } else {
