@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { NavLink, withRouter } from "react-router-dom";
 
+import "../Color.scss";
+
 class Navigation extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +17,7 @@ class Navigation extends Component {
 
   render() {
     return (
-      <nav>
+      <nav className="color">
         <div>
           <NavLink to="/">Screenplays</NavLink>
           <NavLink to="/add">Submit</NavLink>
