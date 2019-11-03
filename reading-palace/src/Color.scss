@@ -1,3 +1,6 @@
+@import "./variables.scss";
+
 .color {
-  background: red($color: #000000);
+  background: $secondary-color;
+  border: $tborder;
 }
