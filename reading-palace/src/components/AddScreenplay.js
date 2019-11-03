@@ -67,59 +67,61 @@ class AddScreenplay extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            name="pdfurl"
-            value={this.state.pdfurl}
-            onChange={this.handleInputChange}
-            id="pdfurl"
-            placeholder="Paste PDF Link"
-          />
-          <input
-            type="text"
-            name="title"
-            value={this.state.title}
-            onChange={this.handleInputChange}
-            id="title"
-            placeholder="Title"
-          />
+        <div className="screenplay-form">
+          <form onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              name="pdfurl"
+              value={this.state.pdfurl}
+              onChange={this.handleInputChange}
+              id="pdfurl"
+              placeholder="Paste PDF Link"
+            />
+            <input
+              type="text"
+              name="title"
+              value={this.state.title}
+              onChange={this.handleInputChange}
+              id="title"
+              placeholder="Title"
+            />
 
-          <input
-            type="text"
-            name="screenwriter"
-            value={this.state.screenwriter}
-            onChange={this.handleInputChange}
-            id="screenwriter"
-            placeholder="Screenwriter"
-          />
-          <input
-            type="text"
-            name="cowriter"
-            value={this.state.cowriter}
-            onChange={this.handleInputChange}
-            id="cowriter"
-            placeholder="Co Writer"
-          />
-          <input
-            type="text"
-            name="description"
-            value={this.state.description}
-            onChange={this.handleInputChange}
-            id="description"
-            placeholder="Description"
-          />
-          <input
-            type="text"
-            name="category"
-            value={this.state.category}
-            onChange={this.handleInputChange}
-            id="category"
-            placeholder="category"
-          />
+            <input
+              type="text"
+              name="screenwriter"
+              value={this.state.screenwriter}
+              onChange={this.handleInputChange}
+              id="screenwriter"
+              placeholder="Screenwriter"
+            />
+            <input
+              type="text"
+              name="cowriter"
+              value={this.state.cowriter}
+              onChange={this.handleInputChange}
+              id="cowriter"
+              placeholder="Co Writer"
+            />
+            <input
+              type="text"
+              name="description"
+              value={this.state.description}
+              onChange={this.handleInputChange}
+              id="description"
+              placeholder="Description"
+            />
+            <input
+              type="text"
+              name="category"
+              value={this.state.category}
+              onChange={this.handleInputChange}
+              id="category"
+              placeholder="category"
+            />
 
-          <button type="submit">Submit</button>
-        </form>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </div>
     );
   }

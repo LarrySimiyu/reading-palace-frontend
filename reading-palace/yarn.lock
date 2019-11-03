@@ -6454,6 +6454,11 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
+node-ass@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/node-ass/-/node-ass-1.0.4.tgz#69a814f304124b9d43fb8fab85c798a6785a9045"
+  integrity sha512-yRZ/Tne/Ot7Qq6cLIFHVxxNQVj8rkcHHfYSwrdE0eTPfokhbt73yF1NtVNw6HgyICUvf4vcu63V60kB7XPdgGQ==
+
 node-forge@0.7.5:
   version "0.7.5"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.7.5.tgz#6c152c345ce11c52f465c2abd957e8639cd674df"
