@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "reactstrap";
+import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
 class AddScreenplay extends Component {
   constructor(props) {
@@ -71,8 +71,9 @@ class AddScreenplay extends Component {
     return (
       <div>
         <div className="screenplay-form">
-          <form onSubmit={this.handleSubmit}>
-            <input
+          <Form onSubmit={this.handleSubmit}>
+            <Label for="title">Title</Label>
+            <Input
               type="text"
               name="title"
               value={this.state.title}
@@ -80,8 +81,9 @@ class AddScreenplay extends Component {
               id="title"
               placeholder="Title"
             />
+            <Label for="screenwriter">Screenwriter</Label>
 
-            <input
+            <Input
               type="text"
               name="screenwriter"
               value={this.state.screenwriter}
@@ -89,15 +91,19 @@ class AddScreenplay extends Component {
               id="screenwriter"
               placeholder="Screenwriter"
             />
-            <input
+            <Label for="cowriter">Co-Writer</Label>
+
+            <Input
               type="text"
               name="cowriter"
               value={this.state.cowriter}
               onChange={this.handleInputChange}
               id="cowriter"
-              placeholder="Co Writer"
+              placeholder="Co-Writer"
             />
-            <input
+            <Label for="description">Description</Label>
+
+            <Input
               type="text"
               name="description"
               value={this.state.description}
@@ -105,7 +111,9 @@ class AddScreenplay extends Component {
               id="description"
               placeholder="Description"
             />
-            <input
+            <Label for="category">Category</Label>
+
+            <Input
               type="text"
               name="category"
               value={this.state.category}
@@ -113,8 +121,9 @@ class AddScreenplay extends Component {
               id="category"
               placeholder="category"
             />
+            <Label for="pdfurl">Link</Label>
 
-            <input
+            <Input
               type="text"
               name="pdfurl"
               value={this.state.pdfurl}
@@ -123,10 +132,10 @@ class AddScreenplay extends Component {
               placeholder="Paste PDF Link"
             />
 
-            <Button color="danger" type="submit">
+            <Button color="primary" type="submit">
               Submit
             </Button>
-          </form>
+          </Form>
         </div>
       </div>
     );
