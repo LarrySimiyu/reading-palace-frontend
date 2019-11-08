@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button } from "reactstrap";
+
 class AddScreenplay extends Component {
   constructor(props) {
     super(props);
@@ -71,14 +74,6 @@ class AddScreenplay extends Component {
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
-              name="pdfurl"
-              value={this.state.pdfurl}
-              onChange={this.handleInputChange}
-              id="pdfurl"
-              placeholder="Paste PDF Link"
-            />
-            <input
-              type="text"
               name="title"
               value={this.state.title}
               onChange={this.handleInputChange}
@@ -119,7 +114,18 @@ class AddScreenplay extends Component {
               placeholder="category"
             />
 
-            <button type="submit">Submit</button>
+            <input
+              type="text"
+              name="pdfurl"
+              value={this.state.pdfurl}
+              onChange={this.handleInputChange}
+              id="pdfurl"
+              placeholder="Paste PDF Link"
+            />
+
+            <Button color="danger" type="submit">
+              Submit
+            </Button>
           </form>
         </div>
       </div>
