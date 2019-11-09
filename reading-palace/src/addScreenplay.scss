@@ -5,3 +5,11 @@
   width: 50%;
   margin-top: 10px;
 }
+
+.page-container {
+  border: $movie-card;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 75px;
+}
