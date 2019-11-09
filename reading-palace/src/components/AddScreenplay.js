@@ -4,6 +4,8 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
+import "../addScreenplay.scss";
+
 class AddScreenplay extends Component {
   constructor(props) {
     super(props);
