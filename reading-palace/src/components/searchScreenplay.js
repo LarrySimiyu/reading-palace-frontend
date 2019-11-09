@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import { Input, FormGroup, Label, Form } from "reactstrap";
+
 class searchScreenplay extends Component {
   constructor(props) {
     super(props);
@@ -50,16 +52,19 @@ class searchScreenplay extends Component {
         : this.state.filteredScreenplays;
     return (
       <div>
-        <h1>Search By Title</h1>
-        <form>
-          <input
-            type="text"
-            placeholder="Screenplay Name"
-            onChange={this.handleInputChange}
-            value={this.state.searchInput}
-            name="searchInput"
-          />
-        </form>
+        <Form>
+          <FormGroup>
+            <Label>Search By Title</Label>
+            <Input
+              type="text"
+              placeholder="Search"
+              onChange={this.handleInputChange}
+              value={this.state.searchInput}
+              name="searchInput"
+            />
+          </FormGroup>
+        </Form>
+
         {results.map(screenplay => {
           return (
             <div key={screenplay.id} className="screenplay">
