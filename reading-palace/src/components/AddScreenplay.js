@@ -81,18 +81,20 @@ class AddScreenplay extends Component {
               id="title"
               placeholder="Title"
             />
-            <Label for="screenwriter">Screenwriter</Label>
 
-            <Input
-              type="text"
-              name="screenwriter"
-              value={this.state.screenwriter}
-              onChange={this.handleInputChange}
-              id="screenwriter"
-              placeholder="Screenwriter"
-            />
+            <FormGroup>
+              <Label for="screenwriter">Screenwriter</Label>
+              <Input
+                type="text"
+                name="screenwriter"
+                value={this.state.screenwriter}
+                onChange={this.handleInputChange}
+                id="screenwriter"
+                placeholder="Screenwriter"
+              />
+            </FormGroup>
+
             <Label for="cowriter">Co-Writer</Label>
-
             <Input
               type="text"
               name="cowriter"
