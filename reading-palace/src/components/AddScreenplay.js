@@ -72,18 +72,22 @@ class AddScreenplay extends Component {
       <div>
         <div className="screenplay-form">
           <Form onSubmit={this.handleSubmit}>
-            <Label for="title">Title</Label>
-            <Input
-              type="text"
-              name="title"
-              value={this.state.title}
-              onChange={this.handleInputChange}
-              id="title"
-              placeholder="Title"
-            />
+            <FormGroup>
+              <Label for="title">Title</Label>
+
+              <Input
+                type="text"
+                name="title"
+                value={this.state.title}
+                onChange={this.handleInputChange}
+                id="title"
+                placeholder="Title"
+              />
+            </FormGroup>
 
             <FormGroup>
               <Label for="screenwriter">Screenwriter</Label>
+
               <Input
                 type="text"
                 name="screenwriter"
@@ -94,45 +98,53 @@ class AddScreenplay extends Component {
               />
             </FormGroup>
 
-            <Label for="cowriter">Co-Writer</Label>
-            <Input
-              type="text"
-              name="cowriter"
-              value={this.state.cowriter}
-              onChange={this.handleInputChange}
-              id="cowriter"
-              placeholder="Co-Writer"
-            />
-            <Label for="description">Description</Label>
+            <FormGroup>
+              <Label for="cowriter">Co-Writer</Label>
+              <Input
+                type="text"
+                name="cowriter"
+                value={this.state.cowriter}
+                onChange={this.handleInputChange}
+                id="cowriter"
+                placeholder="Co-Writer"
+              />
+            </FormGroup>
 
-            <Input
-              type="text"
-              name="description"
-              value={this.state.description}
-              onChange={this.handleInputChange}
-              id="description"
-              placeholder="Description"
-            />
-            <Label for="category">Category</Label>
+            <FormGroup>
+              <Label for="description">Description</Label>
+              <Input
+                type="textarea"
+                name="description"
+                value={this.state.description}
+                onChange={this.handleInputChange}
+                id="description"
+                placeholder="Screenplay Description"
+              />
+            </FormGroup>
 
-            <Input
-              type="text"
-              name="category"
-              value={this.state.category}
-              onChange={this.handleInputChange}
-              id="category"
-              placeholder="category"
-            />
-            <Label for="pdfurl">Link</Label>
+            <FormGroup>
+              <Label for="category">Category</Label>
+              <Input
+                type="text"
+                name="category"
+                value={this.state.category}
+                onChange={this.handleInputChange}
+                id="category"
+                placeholder="category"
+              />
+            </FormGroup>
 
-            <Input
-              type="text"
-              name="pdfurl"
-              value={this.state.pdfurl}
-              onChange={this.handleInputChange}
-              id="pdfurl"
-              placeholder="Paste PDF Link"
-            />
+            <FormGroup>
+              <Label for="pdfurl">Link</Label>
+              <Input
+                type="text"
+                name="pdfurl"
+                value={this.state.pdfurl}
+                onChange={this.handleInputChange}
+                id="pdfurl"
+                placeholder="Paste PDF Link"
+              />
+            </FormGroup>
 
             <Button color="primary" type="submit">
               Submit
