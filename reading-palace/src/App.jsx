@@ -9,7 +9,6 @@ import Screenplay from "./components/Screenplay";
 import AddScreenplay from "./components/AddScreenplay";
 import Screenplays from "./components/Screenplays";
 
-// import AddHitlist from "./components/AddHitList";
 import searchScreenplay from "./components/searchScreenplay";
 
 class App extends Component {
