@@ -41,7 +41,6 @@ class Screenplays extends Component {
                 <div>Title: {screenplay.title}</div>
                 <div>Screenwriter: {screenplay.screenwriter}</div>
                 <div>Cowriter: {screenplay.cowriter}</div>
-                <div>Description: {screenplay.description}</div>
                 <div>Category: {screenplay.category}</div>
                 <div>Link: {screenplay.pdfurl}</div>
                 <div>
