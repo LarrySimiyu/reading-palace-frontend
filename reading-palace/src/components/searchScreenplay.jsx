@@ -71,12 +71,14 @@ class searchScreenplay extends Component {
           {results.map(screenplay => {
             return (
               <div key={screenplay.id} className="screenplay">
+                <div>Title: {screenplay.title}</div>
+                <div>screenwriter: {screenplay.screenwriter}</div>
+                <div>Co Author: {screenplay.coauthor}</div>
+                <div>Description: {screenplay.description}</div>
+                <div>Category: {screenplay.catetegory}</div>
+
                 <Link to={`/screenplay/${screenplay.id}`} className="linkColor">
-                  <div>Title: {screenplay.title}</div>
-                  <div>screenwriter: {screenplay.screenwriter}</div>
-                  <div>Co Author: {screenplay.coauthor}</div>
-                  <div>Description: {screenplay.description}</div>
-                  <div>Category: {screenplay.catetegory}</div>
+                  <button>More</button>
                 </Link>
               </div>
             );

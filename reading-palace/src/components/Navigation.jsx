@@ -19,6 +19,7 @@ class Navigation extends Component {
     return (
       <nav className="color">
         <div>
+          <h1>Movie Palace</h1>
           <NavLink to="/">Screenplays</NavLink>
           <NavLink to="/add">Submit</NavLink>
           <NavLink to="/search">Search</NavLink>
