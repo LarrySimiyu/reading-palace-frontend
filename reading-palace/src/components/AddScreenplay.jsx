@@ -70,6 +70,21 @@ class AddScreenplay extends Component {
   };
 
   render() {
+    const {
+      title,
+      screenwriter,
+      cowriter,
+      description,
+      category,
+      pdfurl
+    } = this.state;
+    const isEnabled =
+      title.length > 0 &&
+      screenwriter.length > 0 &&
+      cowriter.length > 0 &&
+      description.length > 0 &&
+      category.length > 0 &&
+      pdfurl.length > 0;
     return (
       <div>
         <div className="page-container">
@@ -149,7 +164,7 @@ class AddScreenplay extends Component {
                 />
               </FormGroup>
 
-              <Button color="primary" type="submit">
+              <Button color="primary" type="submit" disabled={!isEnabled}>
                 Submit
               </Button>
             </Form>
