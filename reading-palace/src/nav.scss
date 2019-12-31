@@ -6,4 +6,19 @@
   z-index: 99;
   display: flex;
   justify-content: space-between;
+
+  margin: 0 3%;
+  margin-top: 10px;
+}
+
+.nav-elements {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-self: baseline;
+}
+
+.nav-link,
+.nav-link:hover {
+  color: black;
 }

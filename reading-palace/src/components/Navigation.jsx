@@ -18,14 +18,14 @@ class Navigation extends Component {
   render() {
     return (
       <nav className="nav-container">
-        <div>
+        <div className="nav-elements">
           <h1>Movie Palace</h1>
           {/* <NavLink to="/">Screenplays</NavLink> */}
           <NavLink to="/add" className="nav-link">
-            Add Screenplay
+            <h1>Add</h1>
           </NavLink>
           <NavLink to="/screenplays" className="nav-link">
-            Screenplays
+            <h1>Read</h1>
           </NavLink>
 
           {/* {localStorage.token ? (
