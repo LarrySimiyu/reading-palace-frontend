@@ -1,0 +1,9 @@
+@import "./variables.scss";
+
+.nav-container {
+  //background: $secondary-color;
+  border-bottom: 2px solid black;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+}

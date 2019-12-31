@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink, withRouter } from "react-router-dom";
 
-import "../Color.scss";
+import "../nav.scss";
 
 class Navigation extends Component {
   constructor(props) {
@@ -17,12 +17,16 @@ class Navigation extends Component {
 
   render() {
     return (
-      <nav className="color">
+      <nav className="nav-container">
         <div>
           <h1>Movie Palace</h1>
           {/* <NavLink to="/">Screenplays</NavLink> */}
-          <NavLink to="/add">Add Screenplay</NavLink>
-          <NavLink to="/screenplays">Screenplays</NavLink>
+          <NavLink to="/add" className="nav-link">
+            Add Screenplay
+          </NavLink>
+          <NavLink to="/screenplays" className="nav-link">
+            Screenplays
+          </NavLink>
 
           {/* {localStorage.token ? (
             <button>Log Out</button>
