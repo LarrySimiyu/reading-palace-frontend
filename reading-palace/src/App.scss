@@ -3,5 +3,6 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  border: $tborder;
+  margin: 0 3%;
+  z-index: 99;
 }
