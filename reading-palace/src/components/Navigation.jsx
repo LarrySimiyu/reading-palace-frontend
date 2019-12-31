@@ -20,9 +20,9 @@ class Navigation extends Component {
       <nav className="color">
         <div>
           <h1>Movie Palace</h1>
-          <NavLink to="/">Screenplays</NavLink>
-          <NavLink to="/add">Submit</NavLink>
-          <NavLink to="/search">Search</NavLink>
+          {/* <NavLink to="/">Screenplays</NavLink> */}
+          <NavLink to="/add">Add Screenplay</NavLink>
+          <NavLink to="/screenplays">Screenplays</NavLink>
 
           {/* {localStorage.token ? (
             <button>Log Out</button>

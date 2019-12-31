@@ -20,10 +20,10 @@ class App extends Component {
       <div className="App">
         <Navigation />
 
-        <Route exact path="/" component={Screenplays} />
+        <Route exact path="/" component={searchScreenplay} />
         <Route exact path="/screenplay/:id" component={Screenplay} />
         <Route exact path="/add" component={AddScreenplay} />
-        <Route exact path="/search" component={searchScreenplay} />
+        <Route exact path="/screenplays" component={searchScreenplay} />
       </div>
     );
   }

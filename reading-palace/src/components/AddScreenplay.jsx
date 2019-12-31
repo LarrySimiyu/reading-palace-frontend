@@ -59,7 +59,7 @@ class AddScreenplay extends Component {
             category: "",
             pdfurl: ""
           });
-          this.props.history.push("/");
+          this.props.history.push("/screenplays");
         } else {
           throw new Error();
         }

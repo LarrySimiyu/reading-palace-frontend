@@ -40,8 +40,8 @@ class Screenplay extends Component {
         <div>Title: {this.state.screenplay.title}</div>
         <div>Screenwriter: {this.state.screenplay.screenwriter}</div>
         <div>Co-Author: {this.state.screenplay.coauthor}</div>
-        <div>Description: {this.state.screenplay.description}</div>
         <div>Category: {this.state.screenplay.category}</div>
+        <div>Description: {this.state.screenplay.description}</div>
         <div>
           <button>
             <a href={this.state.screenplay.pdfurl} target="_blank">
@@ -50,9 +50,13 @@ class Screenplay extends Component {
           </button>
         </div>
 
-        <button type="button" href={this.state.screenplay.pdfurl}>
-          Return
-        </button>
+        <Link
+          to="/screenplays"
+          // type="button"
+          href={this.state.screenplay.pdfurl}
+        >
+          Screenplays
+        </Link>
       </div>
     );
   }
