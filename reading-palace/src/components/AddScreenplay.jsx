@@ -81,7 +81,6 @@ class AddScreenplay extends Component {
     const isEnabled =
       title.length > 0 &&
       screenwriter.length > 0 &&
-      cowriter.length > 0 &&
       description.length > 0 &&
       category.length > 0 &&
       pdfurl.length > 0;
