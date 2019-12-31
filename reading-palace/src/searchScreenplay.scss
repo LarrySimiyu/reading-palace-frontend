@@ -2,7 +2,15 @@
   width: 50%;
 }
 
-.search-container {
+.search-input {
   border: 1px solid red;
   width: 50%;
+}
+
+.results-container {
+  border: 3px solid black;
+  width: 75%;
+  margin: 0 3%;
+  z-index: 99;
+  border: 2px solid red;
 }
