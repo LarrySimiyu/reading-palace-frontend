@@ -54,18 +54,20 @@ class searchScreenplay extends Component {
         : this.state.filteredScreenplays;
     return (
       <div className="results-container">
-        <div className="search-input">
-          <Form>
-            <FormGroup>
-              <Input
-                type="text"
-                placeholder="Search"
-                onChange={this.handleInputChange}
-                value={this.state.searchInput}
-                name="Search By Title"
-              />
-            </FormGroup>
-          </Form>
+        <div className="search-container">
+          <div className="search-input">
+            <Form>
+              <FormGroup>
+                <Input
+                  type="text"
+                  placeholder="Search"
+                  onChange={this.handleInputChange}
+                  value={this.state.searchInput}
+                  name="Search By Title"
+                />
+              </FormGroup>
+            </Form>
+          </div>
         </div>
         <div className="screenplays">
           {results.map(screenplay => {
