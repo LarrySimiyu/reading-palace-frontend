@@ -19,7 +19,6 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
-
         <Route exact path="/" component={searchScreenplay} />
         <Route exact path="/screenplay/:id" component={Screenplay} />
         <Route exact path="/add" component={AddScreenplay} />

@@ -66,6 +66,8 @@ class searchScreenplay extends Component {
               />
             </FormGroup>
           </Form>
+        </div>
+        <div className="screenplays">
           {results.map(screenplay => {
             return (
               <div key={screenplay.id} className="screenplay">
